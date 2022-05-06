@@ -3,6 +3,8 @@
 
 Сборка проекта:
 ```
+$ git clone https://github.com/makuzmenko/udp_server_client_filetransfer.git udp_server_client_filetransfer
+$ cd udp_server_client_filetransfer
 $ cmake ./
 $ cmake --build ./
 ```
