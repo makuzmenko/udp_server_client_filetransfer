@@ -65,7 +65,7 @@ void run_server() {
     auto a = udp_srv.add_ss(2000); //сервер будет работать на 2000 порту
     if(*a > 0) {
         //регистрируем функцию обратного вызова для всех пакетов приходящих на этот
-        //сокет, чтобы отделить бизнеслогику от логики работы сервера сервера
+        //сокет, чтобы отделить бизнеслогику от транспорта
         a->set_onRead(std::bind(&server_context::receive_packet, &srv_context, std::placeholders::_1,std::placeholders::_2,
                                 std::placeholders::_3, std::placeholders::_4));
     }
